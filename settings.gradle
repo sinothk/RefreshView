@@ -1,1 +1,1 @@
-include ':app', ':RefreshFrame'
+include ':app', ':RefreshView'
