@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
@@ -45,19 +47,11 @@ public class Since171202MainActivity extends AppCompatActivity {
         recycleView.setRefresh(true);
         recycleView.setNoDateShow();
         recycleView.setAutoLoadMore(true);
-//        recycleView.setOnItemClickListener(new OnItemClickListener() {
-//            @Override
-//            public void onClick(int position) {
-//                Toast.makeText(Since171202MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onLongClick(int po) {
-//                Toast.makeText(Since171202MainActivity.this, "Long:" + po, Toast.LENGTH_SHORT).show();
-//            }
-//        });
         recycleView.setItemAnimator(new DefaultItemAnimator());
+        recycleView.setLayoutManager(new GridLayoutManager(this, 3));
+
         adapter = new Since171202MainAdapter(list);
+//        adapter = new Since171202MainAdapter();
         recycleView.setAdapter(adapter);
 
         TextView tv = new TextView(Since171202MainActivity.this);
@@ -73,6 +67,8 @@ public class Since171202MainActivity extends AppCompatActivity {
         tv.setGravity(Gravity.CENTER);
         tv.setBackgroundColor(Color.RED);
         recycleView.setFootView(tv);
+
+//        adapter.setData(list);
 
         recycleView.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -111,9 +107,8 @@ public class Since171202MainActivity extends AppCompatActivity {
                     public void run() {
                         recycleView.stopLoadMore();
                         list.add(list.size(), "leefeng.me" + "==onLoadMore");
-                        //                list.add(list.size(), "leefeng.me" + "==onLoadMore");
-                        adapter.notifyItemRangeInserted(list.size() - 1, 1);
 
+                        adapter.notifyItemRangeInserted(list.size() - 1, 1);
                     }
                 }, 2000);
             }

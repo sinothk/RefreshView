@@ -349,7 +349,7 @@ public class ORecyclerView extends RecyclerView {
         observer = new oAdapterDataObserver();
     }
 
-    class oAdapterDataObserver extends AdapterDataObserver {
+   private class oAdapterDataObserver extends AdapterDataObserver {
         @Override
         public void onChanged() {
 //            super.onChanged();

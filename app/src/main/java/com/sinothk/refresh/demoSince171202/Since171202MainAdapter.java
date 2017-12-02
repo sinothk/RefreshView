@@ -8,26 +8,30 @@ import android.widget.TextView;
 
 import com.sinothk.refresh.demo.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by limxing on 16/7/23.
- *
+ * <p>
  * https://github.com/limxing
  * Blog: http://www.leefeng.me
  */
 public class Since171202MainAdapter extends RecyclerView.Adapter<Since171202MainAdapter.MasonryView> {
 
-    private final List<String> list;
+    private List<String> list;
+
+    public Since171202MainAdapter() {
+        list = new ArrayList<>();
+    }
 
     public Since171202MainAdapter(List<String> list) {
-
-        this.list=list;
+        this.list = list;
     }
 
     @Override
     public MasonryView onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.since_171202_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.since_171202_item, parent, false);
         return new MasonryView(view);
     }
 
@@ -40,6 +44,16 @@ public class Since171202MainAdapter extends RecyclerView.Adapter<Since171202Main
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public void setData(ArrayList<String> data) {
+        if (list == null) {
+            list = new ArrayList<>();
+        } else {
+            this.list.clear();
+        }
+        this.list.addAll(data);
+        notifyDataSetChanged();
     }
 
     class MasonryView extends RecyclerView.ViewHolder {
