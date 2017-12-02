@@ -3,4 +3,6 @@
     <declare-styleable name="QRefreshLayout">
         <attr name="resistance" format="float"/>
     </declare-styleable>
+
+
 </resources>
