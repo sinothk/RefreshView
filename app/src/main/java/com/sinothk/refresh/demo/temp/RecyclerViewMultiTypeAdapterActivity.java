@@ -39,10 +39,10 @@ public class RecyclerViewMultiTypeAdapterActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        recyclerView.addItemDecoration(new DividerDecoration(Color.parseColor("#0000FF"), 12));
+        recyclerView.addItemDecoration(new DividerDecoration(Color.parseColor("#0000FF"), 12));
 
-        recyclerView.addItemDecoration(new SpaceDecoration(Color.BLACK, 12));
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+//        recyclerView.addItemDecoration(new SpaceDecoration(Color.BLACK, 12));
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
 
         refreshLayout = (QRefreshLayout) findViewById(R.id.refreshlayout);
         refreshLayout.setHeaderView(new HeaderView(this));
