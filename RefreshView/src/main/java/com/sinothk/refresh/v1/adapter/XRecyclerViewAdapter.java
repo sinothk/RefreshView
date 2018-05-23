@@ -1,4 +1,4 @@
-package com.sinothk.refresh.demo.temp.lib.adapter;
+package com.sinothk.refresh.v1.adapter;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;

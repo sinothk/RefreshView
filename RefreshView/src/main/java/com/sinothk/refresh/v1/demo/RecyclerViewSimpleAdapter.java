@@ -1,10 +1,11 @@
-package com.sinothk.refresh.demo.temp;
+package com.sinothk.refresh.v1.demo;
 
 import android.support.v7.widget.RecyclerView;
 
-import com.sinothk.refresh.demo.R;
-import com.sinothk.refresh.demo.temp.lib.adapter.XRecyclerViewAdapter;
-import com.sinothk.refresh.demo.temp.lib.adapter.XViewHolder;
+
+import com.sinothk.refresh.R;
+import com.sinothk.refresh.v1.adapter.XRecyclerViewAdapter;
+import com.sinothk.refresh.v1.adapter.XViewHolder;
 
 import java.util.List;
 

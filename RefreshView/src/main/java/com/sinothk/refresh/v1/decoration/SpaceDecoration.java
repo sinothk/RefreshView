@@ -1,7 +1,6 @@
-package com.sinothk.refresh.demo.temp.lib.adapter.decoration;
+package com.sinothk.refresh.v1.decoration;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-import com.sinothk.refresh.demo.temp.lib.adapter.XRecyclerViewAdapter;
+import com.sinothk.refresh.v1.adapter.XRecyclerViewAdapter;
 
 import static android.widget.LinearLayout.VERTICAL;
 

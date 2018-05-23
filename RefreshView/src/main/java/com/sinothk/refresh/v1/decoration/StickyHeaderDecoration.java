@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sinothk.refresh.demo.temp.lib.adapter.decoration;
+package com.sinothk.refresh.v1.decoration;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -23,7 +23,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sinothk.refresh.demo.temp.lib.adapter.XRecyclerViewAdapter;
+import com.sinothk.refresh.v1.adapter.XRecyclerViewAdapter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -58,8 +58,9 @@ public class StickyHeaderDecoration extends RecyclerView.ItemDecoration {
 
         /**
          * Updates the header view to reflect the header data for the given position
+         *
          * @param viewholder the header view holder
-         * @param position the header's item position
+         * @param position   the header's item position
          */
         void onBindHeaderViewHolder(T viewholder, int position);
     }
@@ -76,16 +77,14 @@ public class StickyHeaderDecoration extends RecyclerView.ItemDecoration {
     private boolean mIncludeHeader = false;
 
     /**
-     * @param adapter
-     *         the sticky header adapter to use
+     * @param adapter the sticky header adapter to use
      */
     public StickyHeaderDecoration(IStickyHeaderAdapter adapter) {
         this(adapter, false);
     }
 
     /**
-     * @param adapter
-     *         the sticky header adapter to use
+     * @param adapter the sticky header adapter to use
      */
     public StickyHeaderDecoration(IStickyHeaderAdapter adapter, boolean renderInline) {
         mAdapter = adapter;
@@ -105,19 +104,19 @@ public class StickyHeaderDecoration extends RecyclerView.ItemDecoration {
         int position = parent.getChildAdapterPosition(view);
         int headerHeight = 0;
 
-        if (!mIncludeHeader){
-            if (parent.getAdapter() instanceof XRecyclerViewAdapter){
+        if (!mIncludeHeader) {
+            if (parent.getAdapter() instanceof XRecyclerViewAdapter) {
                 int headerCount = ((XRecyclerViewAdapter) parent.getAdapter()).getHeaderCount();
                 int footerCount = ((XRecyclerViewAdapter) parent.getAdapter()).getFooterCount();
                 int dataCount = ((XRecyclerViewAdapter) parent.getAdapter()).getDataCount();
-                if (position<headerCount){
+                if (position < headerCount) {
                     return;
                 }
-                if (position>=headerCount+dataCount){
-                    return ;
+                if (position >= headerCount + dataCount) {
+                    return;
                 }
-                if (position>=headerCount){
-                    position-=headerCount;
+                if (position >= headerCount) {
+                    position -= headerCount;
                 }
 
             }
@@ -204,7 +203,7 @@ public class StickyHeaderDecoration extends RecyclerView.ItemDecoration {
      */
     @Override
     public void onDrawOver(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
-        if (parent.getAdapter() == null){
+        if (parent.getAdapter() == null) {
             return;
         }
 
@@ -215,19 +214,19 @@ public class StickyHeaderDecoration extends RecyclerView.ItemDecoration {
             final View child = parent.getChildAt(layoutPos);
             int adapterPos = parent.getChildAdapterPosition(child);
 
-            if (!mIncludeHeader){
-                if (parent.getAdapter() instanceof XRecyclerViewAdapter){
+            if (!mIncludeHeader) {
+                if (parent.getAdapter() instanceof XRecyclerViewAdapter) {
                     int headerCount = ((XRecyclerViewAdapter) parent.getAdapter()).getHeaderCount();
                     int footerCount = ((XRecyclerViewAdapter) parent.getAdapter()).getFooterCount();
                     int dataCount = ((XRecyclerViewAdapter) parent.getAdapter()).getDataCount();
-                    if (adapterPos<headerCount){
+                    if (adapterPos < headerCount) {
                         continue;
                     }
-                    if (adapterPos>=headerCount+dataCount){
-                        continue ;
+                    if (adapterPos >= headerCount + dataCount) {
+                        continue;
                     }
-                    if (adapterPos>=headerCount){
-                        adapterPos-=headerCount;
+                    if (adapterPos >= headerCount) {
+                        adapterPos -= headerCount;
                     }
 
                 }

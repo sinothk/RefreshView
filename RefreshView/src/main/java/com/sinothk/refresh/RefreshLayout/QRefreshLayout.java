@@ -92,6 +92,7 @@ public class QRefreshLayout extends FrameLayout implements NestedScrollingChild,
         params.width = LayoutParams.MATCH_PARENT;
         params.height = LayoutParams.MATCH_PARENT;
         mTarget.setLayoutParams(params);
+
         if (mHeaderView == null) {
             setHeaderView(new HeaderView(getContext()));
         }

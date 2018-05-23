@@ -1,6 +1,5 @@
-package com.sinothk.refresh.demo.temp.imageload;
+package com.sinothk.refresh.v1.imageload;
 
-import android.content.Context;
 import android.widget.ImageView;
 
 

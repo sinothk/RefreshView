@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.sinothk.refresh.demo.temp.RecyclerViewMultiTypeAdapterActivity">
+        <activity android:name="com.sinothk.refresh.v1.demo.RecyclerViewMultiTypeAdapterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,22 +1,19 @@
-package com.sinothk.refresh.demo.temp;
+package com.sinothk.refresh.v1.demo;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.sinothk.refresh.R;
 import com.sinothk.refresh.RefreshLayout.QRefreshLayout;
 import com.sinothk.refresh.RefreshLayout.listener.RefreshHandler;
 import com.sinothk.refresh.RefreshLayout.widget.classics.FooterView;
 import com.sinothk.refresh.RefreshLayout.widget.classics.HeaderView;
-import com.sinothk.refresh.demo.R;
-import com.sinothk.refresh.demo.temp.lib.adapter.XRecyclerViewAdapter;
-import com.sinothk.refresh.demo.temp.lib.adapter.decoration.DividerDecoration;
+import com.sinothk.refresh.v1.adapter.XRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,8 +34,8 @@ public class RecyclerViewSimpleAdapterActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.addItemDecoration(new DividerDecoration(Color.parseColor("#FF0000"), 12));
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+//        recyclerView.addItemDecoration(new DividerDecoration(Color.parseColor("#FF0000"), 12));
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
 
         refreshLayout = (QRefreshLayout) findViewById(R.id.refreshlayout);
         refreshLayout.setHeaderView(new HeaderView(this));
@@ -96,9 +93,10 @@ public class RecyclerViewSimpleAdapterActivity extends AppCompatActivity {
     }
 
     public void getData() {
-        Collections.addAll(mDatas, "第1条数据", "第2条数据", "第3条数据", "第4条数据", "第5条数据",
-                "第6条数据", "第7条数据", "第8条数据", "第9条数据", "第10条数据", "第11条数据",
-                "第12条数据", "第13条数据", "第14条数据", "第15条数据", "第16条数据", "第17条数据", "第18条数据"
+        Collections.addAll(mDatas, "第1条数据", "第2条数据", "第3条数据", "第4条数据", "第5条数据"
+                //,
+//                "第6条数据", "第7条数据", "第8条数据", "第9条数据", "第10条数据", "第11条数据",
+//                "第12条数据", "第13条数据", "第14条数据", "第15条数据", "第16条数据", "第17条数据", "第18条数据"
                 , "第19条数据", "第20条数据");
     }
 }

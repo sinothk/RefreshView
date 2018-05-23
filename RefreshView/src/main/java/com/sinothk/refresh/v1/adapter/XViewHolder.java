@@ -1,4 +1,4 @@
-package com.sinothk.refresh.demo.temp.lib.adapter;
+package com.sinothk.refresh.v1.adapter;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -21,7 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.sinothk.refresh.demo.temp.imageload.XImage;
+import com.sinothk.refresh.v1.imageload.XImage;
 
 public class XViewHolder extends RecyclerView.ViewHolder {
 
@@ -84,19 +84,19 @@ public class XViewHolder extends RecyclerView.ViewHolder {
 
     public XViewHolder setImageUrl(@IdRes int viewId, Object imageUrl) {
         ImageView view = getView(viewId);
-        XImage.getInstance().load(view,imageUrl);
+        XImage.getInstance().load(view, imageUrl);
         return this;
     }
 
     public XViewHolder setImageUrl(@IdRes int viewId, Object imageUrl, int defaultImage) {
         ImageView view = getView(viewId);
-        XImage.getInstance().load(view,imageUrl,defaultImage);
+        XImage.getInstance().load(view, imageUrl, defaultImage);
         return this;
     }
 
     public XViewHolder setImageUrl(@IdRes int viewId, Object imageUrl, Object transformation) {
         ImageView view = getView(viewId);
-        XImage.getInstance().load(view,imageUrl,transformation);
+        XImage.getInstance().load(view, imageUrl, transformation);
         return this;
     }
 

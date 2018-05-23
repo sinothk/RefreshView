@@ -1,26 +1,23 @@
-package com.sinothk.refresh.demo.temp;
+package com.sinothk.refresh.v1.demo;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.sinothk.refresh.R;
 import com.sinothk.refresh.RefreshLayout.QRefreshLayout;
 import com.sinothk.refresh.RefreshLayout.listener.RefreshHandler;
 import com.sinothk.refresh.RefreshLayout.widget.classics.FooterView;
 import com.sinothk.refresh.RefreshLayout.widget.classics.HeaderView;
-import com.sinothk.refresh.demo.R;
-import com.sinothk.refresh.demo.temp.lib.adapter.XRecyclerViewAdapter;
-import com.sinothk.refresh.demo.temp.lib.adapter.decoration.DividerDecoration;
-import com.sinothk.refresh.demo.temp.lib.adapter.decoration.SpaceDecoration;
+import com.sinothk.refresh.v1.adapter.XRecyclerViewAdapter;
+import com.sinothk.refresh.v1.decoration.DividerDecoration;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 

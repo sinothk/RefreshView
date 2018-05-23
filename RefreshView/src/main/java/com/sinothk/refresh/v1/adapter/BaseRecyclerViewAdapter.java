@@ -1,11 +1,10 @@
-package com.sinothk.refresh.demo.temp.lib.adapter;
+package com.sinothk.refresh.v1.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public abstract class BaseRecyclerViewAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
